@@ -11,16 +11,17 @@ export default function PrivateRoute({ component: Component, ...rest }) {
       render={(props) => {
         return isLoading ? (
           <h1
-            className='text-warning'
-            style={{ position: 'absolute', top: '50%', left: '50%' }}
+            className='text-warning d-flex flex-column'
+            style={{ position: 'absolute', top: '40%', left: '50%' }}
           >
             <div
               className='spinner-grow text-warning'
               style={{ width: '6rem', height: '6rem' }}
               role='status'
-            >
-              <span className='visually-hidden'>Loading...</span>
-            </div>
+            ></div>
+            <span className='spinner' style={{ marginLeft: '-20px' }}>
+              Loading...
+            </span>
           </h1>
         ) : isLogin ? (
           <Component {...props} />
