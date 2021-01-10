@@ -306,7 +306,7 @@ export default function DetailVideo() {
                 <Comment
                   key={index}
                   channel={comment.channel.channelName}
-                  img={JSON.parse(channel.photo).path}
+                  img={JSON.parse(comment.channel.photo).path}
                   text={comment.comment}
                 />
               ))}

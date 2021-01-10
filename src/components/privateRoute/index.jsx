@@ -19,9 +19,9 @@ export default function PrivateRoute({ component: Component, ...rest }) {
               style={{ width: '6rem', height: '6rem' }}
               role='status'
             ></div>
-            <span className='spinner' style={{ marginLeft: '-20px' }}>
+            {/* <span className='spinner' style={{ marginLeft: '-20px' }}>
               Loading...
-            </span>
+            </span> */}
           </h1>
         ) : isLogin ? (
           <Component {...props} />
