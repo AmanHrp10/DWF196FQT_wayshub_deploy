@@ -6,7 +6,6 @@ import HomeActive from '../../../images/icon/homeActive.png';
 import Sub from '../../../images/icon/sub.png';
 import SubActive from '../../../images/icon/subActive.png';
 import { API } from '../../../config/api';
-import DefaultProfile from '../../../images/channel/defaultProfile.png';
 import Button from '../../atoms/button';
 import './sidebar.css';
 import { AppContext } from '../../../context/appContext';

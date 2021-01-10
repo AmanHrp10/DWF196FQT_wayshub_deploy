@@ -1,5 +1,4 @@
 import Card from '../Card';
-import MyVideos from '../../../API/myVideos';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../../context/appContext';
 import { API } from '../../../config/api';

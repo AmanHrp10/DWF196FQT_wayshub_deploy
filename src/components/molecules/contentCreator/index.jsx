@@ -3,7 +3,6 @@ import './contentCreator.css';
 import { useState, useEffect, useContext } from 'react';
 import { API } from '../../../config/api';
 import { useParams } from 'react-router-dom';
-import DefaultProfile from '../../../images/channel/defaultProfile.png';
 import Moment from 'moment';
 import { AppContext } from '../../../context/appContext';
 

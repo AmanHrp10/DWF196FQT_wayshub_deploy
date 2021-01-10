@@ -2,7 +2,6 @@ import { Fragment, useContext } from 'react';
 import Sidebar from '../sidebar';
 import Navbar from '../navbar';
 import './mainMenu.css';
-import { AppContext } from '../../../context/appContext';
 
 export default function Menu({
   isHome,
@@ -10,10 +9,6 @@ export default function Menu({
   isAddVideo,
   onChangeSearch,
 }) {
-  // const [state, dispatch] = useContext(AppContext);
-  // const { channel } = state;
-
-  // console.log(channel);
   return (
     <Fragment>
       <Sidebar isHome={isHome} isSubscribed={isSubscribed} />

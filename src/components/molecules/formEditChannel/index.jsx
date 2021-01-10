@@ -6,7 +6,6 @@ import Button from '../../atoms/button';
 import Galery from '../../../images/icon/galery.png';
 import './formEditChannel.css';
 import { API } from '../../../config/api';
-import { AppContext } from '../../../context/appContext';
 import { useHistory } from 'react-router-dom';
 
 export default function FormEditChannel() {

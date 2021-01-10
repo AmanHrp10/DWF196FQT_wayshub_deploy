@@ -11,8 +11,6 @@ import { API } from '../../../config/api';
 import { useHistory } from 'react-router-dom';
 
 export default function FormAdd() {
-  const fileThumbnail = React.useRef();
-  const fileVideo = React.useRef();
   const [formData, setFormData] = useState({
     title: '',
     thumbnail: '',

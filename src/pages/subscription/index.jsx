@@ -15,10 +15,6 @@ export default function Subcription() {
       console.log(err);
     }
   };
-  // const createdAt = videos.map((video) => video.createdAt);
-  // const date = Moment(createdAt[0]).format('ll');
-  // console.log(date);
-
   useEffect(() => {
     fetchVideo();
   }, []);
