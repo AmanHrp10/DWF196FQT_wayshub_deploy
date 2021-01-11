@@ -186,7 +186,6 @@ export default function DetailVideo() {
     fetchVideoById();
     fetchSubscribers();
     fetchVideos();
-    fetchUser();
   }, [id]);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
