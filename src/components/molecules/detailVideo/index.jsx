@@ -88,6 +88,9 @@ export default function DetailVideo() {
     try {
       setLoading(true);
 
+      const responseUser = await API('/channel');
+      setChannel(responseUser.data.data.user);
+
       const responseCommment = await API(`/video/${id}/comments`);
       setComments(responseCommment.data.data.comments);
 
@@ -156,17 +159,6 @@ export default function DetailVideo() {
         setSubscriber(subscriber - 1);
         setIsSubscribe((isSubscribe = !isSubscribe));
       }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const fetchUser = async () => {
-    try {
-      setLoading(true);
-      const response = await API('/channel');
-      setChannel(response.data.data.user);
-      setLoading(false);
     } catch (err) {
       console.log(err);
     }
