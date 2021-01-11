@@ -23,7 +23,7 @@ export default function DetailVideo() {
   const [loading, setLoading] = useState(true);
   let [isSubscribe, setIsSubscribe] = useState(false);
   const [subscriber, setSubscriber] = useState();
-  const channel = JSON.parse(localStorage.getItem('user'));
+  const [channel, setChannel] = useState();
   const [formData, setFormData] = useState({
     comment: '',
   });
@@ -47,6 +47,17 @@ export default function DetailVideo() {
       }
     }
     return randomNumber;
+  };
+
+  const fetchUser = async () => {
+    try {
+      setLoading(true);
+      const response = await API('/channel');
+      setChannel(response.data.data.user);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const fetchVideos = async () => {
@@ -182,6 +193,7 @@ export default function DetailVideo() {
     fetchVideoById();
     fetchSubscribers();
     fetchVideos();
+    fetchUser();
   }, [id]);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -276,7 +288,11 @@ export default function DetailVideo() {
           <div className='areaComment'>
             <div className='comment d-flex'>
               <img
-                src={JSON.parse(channel.photo).path}
+                src={
+                  loading || !JSON.parse(channel.photo)
+                    ? DefaultProfile
+                    : JSON.parse(channel.photo).path
+                }
                 alt=''
                 width='45px'
                 height='60px'
