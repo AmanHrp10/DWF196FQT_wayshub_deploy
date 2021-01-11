@@ -3,6 +3,7 @@ import IconDate from '../../../images/refresh1.png';
 import TextArea from '../../atoms/textarea';
 import Comment from '../comment';
 import Card from '../Card';
+import DefaultProfile from '../../../images/channel/defaultProfile.png';
 
 // library
 import ReactPlayer from 'react-player';
