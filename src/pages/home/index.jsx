@@ -70,7 +70,7 @@ export default function Home() {
                       title={video.title}
                       image={video.thumbnail}
                       views={video.viewCount}
-                      date={date}
+                      date={Moment(video.createdAt).format('ll')}
                       channel={video.channel.channelName}
                     />
                   </div>
