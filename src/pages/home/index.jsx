@@ -47,9 +47,6 @@ export default function Home() {
     fetchVideo();
   }, []);
 
-  const createdAt = videos.map((video) => video.createdAt);
-  const date = Moment(createdAt[0]).format('ll');
-
   console.log(videoFilter);
   return (
     <Fragment>
@@ -70,7 +67,7 @@ export default function Home() {
                       title={video.title}
                       image={video.thumbnail}
                       views={video.viewCount}
-                      date={Moment(video.createdAt).format('ll')}
+                      date={video.createdAt}
                       channel={video.channel.channelName}
                     />
                   </div>
